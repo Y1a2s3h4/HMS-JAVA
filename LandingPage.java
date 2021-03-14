@@ -23,6 +23,7 @@ public class LandingPage {
 
     public static void main(String[] args) {
         f = new JFrame("Landing");
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JLabel l1, l2, l3;
 
         JButton btnReg = new JButton("Register");
@@ -32,6 +33,8 @@ public class LandingPage {
         btnReg.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(f, "Registration");
+                f.dispose();
+                new Registration();
             }
         });
         btnLogin.addActionListener(new ActionListener() {

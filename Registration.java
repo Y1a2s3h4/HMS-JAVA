@@ -5,8 +5,9 @@ import java.awt.*;
 import java.sql.*;
 
 public class Registration {
-    public static void main(String[] args) {
+    Registration() {
         JFrame f = new JFrame("Registration");
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JLabel regDoctor, docNameLabel, mailLabel, passLabel, regPatient, paNameLabel, paPassLabel;
         JTextField docNameField, docMailField, docPassField, patientNameField, patientPassField;
         JButton registerDoctor, registerPatient;
