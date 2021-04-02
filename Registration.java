@@ -9,7 +9,8 @@ public class Registration {
         JFrame f = new JFrame("Registration");
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JLabel regDoctor, docNameLabel, mailLabel, passLabel, regPatient, paNameLabel, paPassLabel;
-        JTextField docNameField, docMailField, docPassField, patientNameField, patientPassField;
+        JTextField docNameField, docMailField, patientNameField;
+        JPasswordField docPassField, patientPassField;
         JButton registerDoctor, registerPatient;
 
         // Labels
@@ -43,13 +44,13 @@ public class Registration {
         docMailField = new JTextField();
         docMailField.setBounds(20, 270, 250, 40);
 
-        docPassField = new JTextField();
+        docPassField = new JPasswordField();
         docPassField.setBounds(20, 370, 250, 40);
 
         patientNameField = new JTextField();
         patientNameField.setBounds(520, 170, 250, 40);
 
-        patientPassField = new JTextField();
+        patientPassField = new JPasswordField();
         patientPassField.setBounds(520, 270, 250, 40);
 
         // Button
@@ -89,6 +90,8 @@ public class Registration {
                     eE.printStackTrace();
                 }
                 JOptionPane.showMessageDialog(f, "You Registered As Doctor.");
+                f.dispose();
+                new Login();
             }
         });
 
@@ -116,6 +119,8 @@ public class Registration {
                     eE.printStackTrace();
                 }
                 JOptionPane.showMessageDialog(f, "You Registered As Patient.");
+                f.dispose();
+                new Login();
             }
         });
 
@@ -141,6 +146,4 @@ public class Registration {
 
     }
 }
-// javac LandingPage.java && java -cp "F:\Degree\DSE\Java Labs\HMS
-// Project\mysql-connector-java-8.0.23\mysql-connector-java-8.0.23.jar;F:\Degree\DSE\Java
-// Labs\HMS Project" LandingPage
+// javac LandingPage.java && java -cp "F:\Degree\DSE\Java Labs\HMS Project\mysql-connector-java-8.0.23\mysql-connector-java-8.0.23.jar;F:\Degree\DSE\Java Labs\HMS Project" LandingPage

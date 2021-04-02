@@ -5,20 +5,6 @@ import java.awt.event.*;
 import java.awt.*;
 
 public class LandingPage {
-
-    // void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-    // String title = "Login";
-    // JOptionPane.showMessageDialog(rootPane, title);
-    // }
-
-    // void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
-    // String title = "Registration";
-    // JOptionPane.showMessageDialog(rootPane, title);
-    // Register reg = new Register();
-    // reg.setVisible(true);
-    // new LandingPage().setVisible(false);
-    // this.dispose();
-    // }
     static JFrame f;
 
     public static void main(String[] args) {
@@ -40,6 +26,8 @@ public class LandingPage {
         btnLogin.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(f, "Login");
+                f.dispose();
+                new Login();
             }
         });
 
@@ -62,12 +50,6 @@ public class LandingPage {
         f.setVisible(true);
 
         try (Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3307/hms_db", "root", "Yash123_$")) {
-            // PreparedStatement ps = conn.prepareStatement("INSERT INTO userdetails VALUES
-            // ('Yash', 1234);");
-            // int status = ps.executeUpdate();
-            // if (status != 0) {
-            // System.out.println("DATABASE WAS Connected. Status is Greater than 0 ");
-            // }
             if (conn != null) {
                 System.out.println("Connected to the database!");
             } else {
