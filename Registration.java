@@ -146,4 +146,3 @@ public class Registration {
 
     }
 }
-// javac LandingPage.java && java -cp "F:\Degree\DSE\Java Labs\HMS Project\mysql-connector-java-8.0.23\mysql-connector-java-8.0.23.jar;F:\Degree\DSE\Java Labs\HMS Project" LandingPage

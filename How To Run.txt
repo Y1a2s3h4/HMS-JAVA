@@ -1,0 +1,56 @@
+We need do some little setup before running this.
+
+1) After extracting this project extract the "mysql-connector-java" zip file it is very important file to connect with Database.
+
+2) Make sure that you have MySQL Workbench installed & configured properly.
+
+3) After extracting the "mysql-connector-java" zip file open the terminal to run.
+
+4) To run this project in your workbench you need to create database named "hms_db" the command is:   
+CREATE DATABASE `hms_db`; pates this in your query tab
+
+5) After that create 4 tables in "hms_db" 
+    i) doctorappoint:
+     CREATE TABLE `doctorappoint` (
+  `A_ID` int NOT NULL AUTO_INCREMENT,
+  `Doctor_Name` char(25) DEFAULT NULL,
+  `Patient_Name` char(25) DEFAULT NULL,
+  `Patient_Disease` char(45) DEFAULT NULL,
+  `Date_Time` char(45) DEFAULT NULL,
+  PRIMARY KEY (`A_ID`)
+) ;
+
+    ii) doctordetails:
+CREATE TABLE `doctordetails` (
+  `doc_id` int NOT NULL AUTO_INCREMENT,
+  `doc_name` char(15) DEFAULT NULL,
+  `doc_mail` varchar(30) DEFAULT NULL,
+  `doc_pass` char(20) DEFAULT NULL,
+  PRIMARY KEY (`doc_id`)
+) ;
+    
+    iii) patientappoint:
+     CREATE TABLE `patientappoint` (
+  `PA_ID` int NOT NULL AUTO_INCREMENT,
+  `Patient_Name` char(25) DEFAULT NULL,
+  `Patient_Disease` char(45) DEFAULT NULL,
+  `treatment_by` char(45) DEFAULT NULL,
+  `bill` int DEFAULT NULL,
+  `payBy` char(45) DEFAULT NULL,
+  PRIMARY KEY (`PA_ID`)
+);
+
+    iv) patientdetails:
+    CREATE TABLE `patientdetails` (
+  `patient_id` int NOT NULL AUTO_INCREMENT,
+  `patient_name` char(15) DEFAULT NULL,
+  `patient_pass` char(20) DEFAULT NULL,
+  PRIMARY KEY (`patient_id`)
+);
+
+
+6) Check once that "hms_db" contains this 4 tables
+
+7) Now to run this open terminal where this folder is & paste this command accordingly .
+
+javac LandingPage.java && java -cp "mysql-connector-java-8.0.23\mysql-connector-java-8.0.23.jar;PATH OF THIS FOLDER IS LOCATED" LandingPage
