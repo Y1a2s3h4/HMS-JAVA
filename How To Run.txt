@@ -6,8 +6,8 @@ We need do some little setup before running this.
 
 3) After extracting the "mysql-connector-java" zip file open the terminal to run.
 
-4) To run this project in your workbench you need to create database named "hms_db" the command is:   
-CREATE DATABASE `hms_db`; pates this in your query tab
+4) Create a new connection with hostname as "127.0.0.1" and port number as "3307". To run this project in your workbench you need to create database named "hms_db" the command is:   
+CREATE DATABASE `hms_db`; paste this in your query tab.
 
 5) After that create 4 tables in "hms_db" 
     i) doctorappoint:
@@ -51,6 +51,8 @@ CREATE TABLE `doctordetails` (
 
 6) Check once that "hms_db" contains this 4 tables
 
-7) Now to run this open terminal where this folder is & paste this command accordingly .
+7) Now in MySQL Workbench to use a connection we need to give our password which we set in start of settingup workbench. we need to change the password here in the code. 
+
+8) Now to run this open terminal where this folder is & paste this command accordingly .
 
 javac LandingPage.java && java -cp "mysql-connector-java-8.0.23\mysql-connector-java-8.0.23.jar;PATH OF THIS FOLDER IS LOCATED" LandingPage
