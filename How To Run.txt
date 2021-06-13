@@ -51,7 +51,7 @@ CREATE TABLE `doctordetails` (
 
 6) Check once that "hms_db" contains this 4 tables
 
-7) Now in MySQL Workbench to use a connection we need to give our password which we set in start of settingup workbench. we need to change the password here in the code. 
+7) Now in MySQL Workbench to use a connection we need to give our username & password which we set in start of settingup workbench. we need to change the username & password here in the code. I already have set up the username & password. 
 
 8) Now to run this open terminal where this folder is & paste this command accordingly .
 
